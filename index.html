@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Application Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Application Form</h1>
+        <p>
+          Please fill EVERY Form Field. Omitting Any Field will prevent this
+          Form from Submitting.
+        </p>
+      </div>
+      <form action="#">
+        <div class="user-details">
+          <!-- Full Name -->
+          <div class="wrapper">
+            <div class="input-box">
+              <span class="details">Full Name</span>
+              <input type="text" placeholder="Enter your name" required />
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="input-box">
+              <span class="details">Date of Birth</span>
+              <input type="date" required />
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <!-- Gender -->
+            <div class="input-box">
+              <span class="details">Gender</span>
+              <select required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+
+            <!-- Nationality -->
+            <div class="input-box">
+              <span class="details">Nationality</span>
+              <select required>
+                <option value="" disabled selected>Select Country</option>
+                <!-- Add options for all 196 countries -->
+                <option value="Nigeria">Nigeria</option>
+                <option value="United States">United States</option>
+                <option value="Canada">Canada</option>
+                <!-- Continue with other countries -->
+              </select>
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <!-- State of Origin -->
+            <div class="input-box">
+              <span class="details">State of Origin</span>
+              <select required>
+                <option value="" disabled selected>Select State</option>
+                <!-- Add options for all 37 states and FCT -->
+                <option value="Lagos">Lagos</option>
+                <option value="Abuja">Abuja</option>
+                <option value="Ogun">Ogun</option>
+                <!-- Continue with other states -->
+              </select>
+            </div>
+
+            <!-- Local Government of Origin -->
+            <div class="input-box">
+              <span class="details">Local Government of Origin</span>
+              <select required>
+                <option value="" disabled selected>
+                  Select Local Government
+                </option>
+                <!-- Add options for all 774 local governments -->
+                <option value="Abeokuta South">Abeokuta South</option>
+                <option value="Eti-Osa">Eti-Osa</option>
+                <!-- Continue with other local governments -->
+              </select>
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <!-- Address -->
+            <div class="input-box">
+              <span class="details">Address</span>
+              <input type="text" placeholder="Enter your address" required />
+            </div>
+
+            <!-- Local Government of Residence -->
+            <div class="input-box">
+              <span class="details">Local Government of Residence</span>
+              <select required>
+                <option value="" disabled selected>
+                  Select Local Government
+                </option>
+                <!-- Add options for all 774 local governments -->
+                <option value="Abeokuta South">Abeokuta South</option>
+                <option value="Eti-Osa">Eti-Osa</option>
+                <!-- Continue with other local governments -->
+              </select>
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <!-- State of Residence -->
+            <div class="input-box">
+              <span class="details">State of Residence</span>
+              <select required>
+                <option value="" disabled selected>Select State</option>
+                <!-- Add options for all 37 states and FCT -->
+                <option value="Lagos">Lagos</option>
+                <option value="Abuja">Abuja</option>
+                <option value="Ogun">Ogun</option>
+                <!-- Continue with other states -->
+              </select>
+            </div>
+
+            <!-- NIN -->
+            <div class="input-box">
+              <span class="details">NIN</span>
+              <input
+                type="text"
+                placeholder="Enter your NIN"
+                maxlength="11"
+                pattern="\d{11}"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <!-- Name of One Other National ID -->
+            <div class="input-box">
+              <span class="details">Name of One Other National ID</span>
+              <select required>
+                <option value="" disabled selected>Select National ID</option>
+                <option value="Driver's License">Driver’s License</option>
+                <option value="International Passport">
+                  International Passport
+                </option>
+                <option value="Voter’s Card">Voter’s Card</option>
+              </select>
+            </div>
+
+            <!-- Number of the One Other Selected National ID -->
+            <div class="input-box">
+              <span class="details">Number of the Selected National ID</span>
+              <input type="text" placeholder="Enter ID number" required />
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <!-- Phone Number -->
+            <div class="input-box">
+              <span class="details">Phone Number</span>
+              <input
+                type="tel"
+                placeholder="Enter your phone number"
+                maxlength="11"
+                pattern="\d{11}"
+                required
+              />
+            </div>
+
+            <!-- Second Phone Number -->
+            <div class="input-box">
+              <span class="details">Second Phone Number</span>
+              <input
+                type="tel"
+                placeholder="Enter your second phone number"
+                maxlength="11"
+                pattern="\d{11}"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <!-- Active WhatsApp Number -->
+            <div class="input-box">
+              <span class="details">Active WhatsApp Number</span>
+              <input
+                type="tel"
+                placeholder="Enter your WhatsApp number"
+                maxlength="11"
+                pattern="\d{11}"
+                required
+              />
+            </div>
+
+            <!-- Email Address -->
+            <div class="input-box">
+              <span class="details">Email Address</span>
+              <input type="email" placeholder="Enter your email" required />
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <!-- Next of Kin -->
+            <div class="input-box">
+              <span class="details">Next of Kin (Surname First)</span>
+              <input
+                type="text"
+                placeholder="Enter next of kin's name"
+                required
+              />
+            </div>
+
+            <!-- Address of Next of Kin -->
+            <div class="input-box">
+              <span class="details">Address of Next of Kin</span>
+              <input
+                type="text"
+                placeholder="Enter next of kin's address"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <!-- Phone Number of Next of Kin -->
+            <div class="input-box">
+              <span class="details">Phone Number of Next of Kin</span>
+              <input
+                type="tel"
+                placeholder="Enter next of kin's phone number"
+                maxlength="11"
+                pattern="\d{11}"
+                required
+              />
+            </div>
+
+            <!-- Bank Name -->
+            <div class="input-box">
+              <span class="details">Bank Name</span>
+              <input type="text" placeholder="Enter your bank name" required />
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <!-- Bank Account Name -->
+            <div class="input-box">
+              <span class="details">Bank Account Name</span>
+              <input
+                type="text"
+                placeholder="Enter your bank account name"
+                required
+              />
+            </div>
+
+            <!-- Bank Account Number -->
+            <div class="input-box">
+              <span class="details">Bank Account Number</span>
+              <input
+                type="text"
+                placeholder="Enter your bank account number"
+                maxlength="10"
+                pattern="\d{10}"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- New File Uploads Section -->
+          <h2>Required Documents</h2>
+          <div class="wrapper">
+            <!-- Passport Photo -->
+            <div class="input-box">
+              <span class="details">Passport Photo</span>
+              <input
+                type="file"
+                accept="image/*"
+                required
+                class="image-upload"
+              />
+            </div>
+
+            <!-- Passport Photo of Student/Ward/Child -->
+            <div class="input-box">
+              <span class="details">Passport Photo of Student/Ward/Child</span>
+              <input
+                type="file"
+                accept="image/*"
+                required
+                class="image-upload"
+              />
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <!-- NIN Card of Applicant -->
+            <div class="input-box">
+              <span class="details">NIN Card of Applicant (Not Student)</span>
+              <input
+                type="file"
+                accept="image/*,.pdf"
+                required
+                class="image-upload"
+              />
+            </div>
+
+            <!-- Applicant’s Signature -->
+            <div class="input-box">
+              <span class="details"
+                >Applicant’s Signature (Signed on White Paper)</span
+              >
+              <input
+                type="file"
+                accept="image/*"
+                required
+                class="image-upload"
+              />
+            </div>
+          </div>
+
+          <!-- Student's Information -->
+          <h2>Student's Information</h2>
+
+          <div class="wrapper">
+            <!-- Student's Name -->
+            <div class="input-box">
+              <span class="details">Student's Name (Surname First)</span>
+              <input type="text" placeholder="Enter student's name" required />
+            </div>
+
+            <!-- Student's Date of Birth -->
+            <div class="input-box">
+              <span class="details">Student's Date of Birth</span>
+              <input type="date" required />
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <!-- Student's Gender -->
+            <div class="input-box">
+              <span class="details">Student's Gender</span>
+              <select required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+
+            <!-- Student's Nationality -->
+            <div class="input-box">
+              <span class="details">Student's Nationality</span>
+              <select required>
+                <option value="" disabled selected>Select Country</option>
+                <!-- Add options for all 196 countries -->
+                <option value="Nigeria">Nigeria</option>
+                <option value="United States">United States</option>
+                <option value="Canada">Canada</option>
+                <!-- Continue with other countries -->
+              </select>
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <!-- Student's State of Origin -->
+            <div class="input-box">
+              <span class="details">Student's State of Origin</span>
+              <select required>
+                <option value="" disabled selected>Select State</option>
+                <!-- Add options for all 37 states and FCT -->
+                <option value="Lagos">Lagos</option>
+                <option value="Abuja">Abuja</option>
+                <option value="Ogun">Ogun</option>
+                <!-- Continue with other states -->
+              </select>
+            </div>
+
+            <!-- Student's Local Government of Origin -->
+            <div class="input-box">
+              <span class="details">Student's Local Government of Origin</span>
+              <select required>
+                <option value="" disabled selected>
+                  Select Local Government
+                </option>
+                <!-- Add options for all 774 local governments -->
+                <option value="Abeokuta South">Abeokuta South</option>
+                <option value="Eti-Osa">Eti-Osa</option>
+                <!-- Continue with other local governments -->
+              </select>
+            </div>
+          </div>
+
+          <!-- Class Student will Enroll Into -->
+          <div class="input-box">
+            <span class="details">Class Student will Enroll Into</span>
+            <input type="text" placeholder="Enter class" required />
+          </div>
+
+          <!-- Submit Button -->
+          <div class="button">
+            <input type="submit" value="Submit Application" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
