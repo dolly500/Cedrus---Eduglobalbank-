@@ -16,7 +16,7 @@
           Form from Submitting.
         </p>
       </div>
-      <form action="#">
+      <form id="applicationForm" action="javascript:void(0);" method="POST" enctype="multipart/form-data">
         <div class="user-details">
           <!-- Full Name -->
           <div class="wrapper">
@@ -129,8 +129,8 @@
                 type="text"
                 placeholder="Enter your NIN"
                 maxlength="11"
-                pattern="\d{11}"
-                required
+               
+              
               />
             </div>
           </div>
@@ -274,18 +274,18 @@
             <!-- Passport Photo -->
             <div class="input-box">
               <span class="details">Passport Photo</span>
-              <input
+              <input name="passportPhoto" id="passportPhoto"
                 type="file"
                 accept="image/*"
                 required
-                class="image-upload"
+                class="image-upload" required
               />
             </div>
 
             <!-- Passport Photo of Student/Ward/Child -->
             <div class="input-box">
               <span class="details">Passport Photo of Student/Ward/Child</span>
-              <input
+              <input name="studentPhoto" id="studentPhoto"
                 type="file"
                 accept="image/*"
                 required
@@ -298,7 +298,7 @@
             <!-- NIN Card of Applicant -->
             <div class="input-box">
               <span class="details">NIN Card of Applicant (Not Student)</span>
-              <input
+              <input name="ninCard" id="ninCard"
                 type="file"
                 accept="image/*,.pdf"
                 required
@@ -311,7 +311,7 @@
               <span class="details"
                 >Applicant’s Signature (Signed on White Paper)</span
               >
-              <input
+              <input name="signature" id="signature"
                 type="file"
                 accept="image/*"
                 required
@@ -405,4 +405,25 @@
       </form>
     </div>
   </body>
+  <script>
+    document.getElementById("applicationForm").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const formElement = event.target;
+      const formData = new FormData(formElement);
+  
+      try {
+        const response = await fetch("/api/form/submit-form", {
+          method: "POST",
+          body: formData
+        });
+        const result = await response.json();
+        alert(result.message);
+      } catch (error) {
+        console.error("Form submission error:", error);
+        alert("Failed to submit form data");
+      }
+    });
+  </script>
+  
+  
 </html>
